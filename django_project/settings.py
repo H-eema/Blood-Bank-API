@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # local
+    "accounts",
 ]
 
 MIDDLEWARE = [
@@ -78,7 +80,7 @@ WSGI_APPLICATION = "django_project.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgrsql",
+        "ENGINE": "django.db.backends.postgresql",
         "HOST": "localhost",
         "NAME": "BloodBankAPI",
         "CONN_MAX_AGE": None,
@@ -131,3 +133,6 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Auth User Model
+AUTH_USER_MODEL = "accounts.CustomUser"
